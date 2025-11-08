@@ -1,0 +1,1 @@
+"C:\Program Files\VirtViewer v11.0-256\bin\remote-viewer.exe" spice://127.0.0.1:5930
