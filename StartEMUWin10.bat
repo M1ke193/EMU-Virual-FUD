@@ -24,7 +24,7 @@ REM ===== command to run =====
   -machine pc-q35-9.0,usb=off,vmport=off,kernel_irqchip=on,hpet=off,acpi=on ^
   -accel whpx ^
   -cpu Nehalem,+ssse3,+sse4.1,+sse4.2,+x2apic,hv_relaxed,hv_spinlocks=0x1fff,hv_vapic,hv_time,hv_vendor_id=GenuineIntel ^
-  -smp 4,sockets=1,cores=4,threads=1 ^
+  -smp 6,sockets=1,cores=6,threads=1 ^
   -m 8G ^
   -drive file=%VM_IMG%,cache=writeback,format=qcow2,aio=threads ^
   -boot order=d,strict=on ^
@@ -32,13 +32,16 @@ REM ===== command to run =====
   -rtc base=localtime,driftfix=slew,clock=host ^
   -global ICH9-LPC.disable_s3=1 ^
   -global ICH9-LPC.disable_s4=1 ^
-  -device VGA,vgamem_mb=256 ^
+  -device VGA,vgamem_mb=512 ^
+  -global VGA.edid=on ^
+  -global VGA.xres=1920 ^
+  -global VGA.yres=1080 ^
   -display sdl ^
   -device virtio-serial-pci ^
   -device intel-hda ^
   -device hda-duplex ^
   -device virtio-net-pci,netdev=net0 ^
-  -netdev user,id=net0 ^
+  -netdev user,id=net0,ipv6=off ^
   -usb ^
   -device virtio-balloon-pci ^
   -device usb-tablet ^
