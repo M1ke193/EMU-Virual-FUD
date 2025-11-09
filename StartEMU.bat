@@ -1,5 +1,8 @@
 
 @echo off
+chcp 65001 >nul
+cls
+color 0A
 REM QEMU VM Launcher
 
 REM ===== Config  =====
@@ -19,10 +22,15 @@ echo SPICE Server: localhost:%SPICE_PORT%
 echo Using Remote Viewer to connect
 echo ================================================
 echo.
-echo Luu y:
-echo - Ctrl+Alt+G to escape mouse from VM
-echo - Ctrl+Alt+F to full screen
-echo - Ctrl+Alt+Q exit QEMU
+echo ╔════════════════════════════════════════════════╗
+echo ║              SPICE HOTKEYS - CHEAT SHEET       ║
+echo ╠════════════════════════════════════════════════╣
+echo ║ Shift + F12         │ Release / Grab Mouse     ║
+echo ║ F11                 │ Toggle Fullscreen        ║
+echo ║ Ctrl + Alt + End    │ Send Ctrl+Alt+Del        ║
+echo ║ Ctrl + C / V        │ Copy / Paste             ║
+echo ║ Alt + F4            │ Close VM Window          ║
+echo ╚════════════════════════════════════════════════╝
 echo.
 
 REM ===== command to run =====

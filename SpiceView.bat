@@ -1,4 +1,7 @@
 @echo off
+chcp 65001 >nul
+cls
+color 0A
 set "PATH_VIEW=C:\Program Files\VirtViewer v11.0-256\bin\remote-viewer.exe"
 set "SPICE_PORT=5900"
 

@@ -21,6 +21,8 @@
 
 - Final: When you start VM already and then download https://www.spice-space.org/download/windows/spice-guest-tools/spice-guest-tools-latest.exe inside it and install.
 
+- You can set many other settings in the `Command` of StartEMU.bat base, but now this configuration ok with my computer.
+
 ### HOW TO RUN
 - RUN `StartEMU.bat`
 - THEN RUN `SpciceView.bat`
